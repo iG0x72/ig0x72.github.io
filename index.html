@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Igor Farias – iOS Security Researcher</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description"
+    content="Portfolio and CV of Igor Farias – iOS Security Researcher and Mobile Security Engineer." />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+
+<body data-theme="light">
+  <div class="boot-screen" aria-hidden="true">
+    <div class="boot-inner">
+      <img src="assets/icons/apple.logo.svg" alt="" class="boot-logo" />
+      <div class="boot-progress">
+        <span class="boot-progress-bar"></span>
+      </div>
+    </div>
+  </div>
+  <div data-include="header"></div>
+  <div class="desktop">
+    <div class="window">
+      <!-- macOS-style titlebar -->
+      <div class="titlebar">
+        <div class="traffic-lights">
+          <div class="traffic-light red"></div>
+          <div class="traffic-light yellow"></div>
+          <div class="traffic-light green"></div>
+        </div>
+        <div class="titlebar-label">iG0x72 – Portfolio</div>
+        <div class="spacer"></div>
+        <div class="titlebar-dots">
+          <div class="titlebar-dot"></div>
+          <div class="titlebar-dot"></div>
+          <div class="titlebar-dot"></div>
+        </div>
+      </div>
+
+      <!-- Top navigation -->
+      <nav class="nav">
+        <a href="#about" class="nav-link active">About</a>
+        <a href="#experience" class="nav-link">Experience</a>
+        <a href="#projects" class="nav-link">Projects</a>
+        <a href="#research" class="nav-link">Research</a>
+        <a href="#contact" class="nav-link">Contact</a>
+      </nav>
+
+      <!-- Content -->
+      <main class="content">
+        <section class="bento-hero" id="about">
+          <div class="hero-text">
+            <div class="hero-top">
+              <img src="assets/me.png" alt="Memoji of Igor Farias" class="hero-avatar" />
+              <div>
+                <div class="hero-kicker">OS SECURITY · RESEARCH</div>
+                <h1 class="hero-name">Igor Farias</h1>
+                <div class="hero-role">iOS Security Researcher</div>
+              </div>
+            </div>
+            <p class="hero-bio">
+              I research Apple kernel security by reverse engineering kernel internals, analyzing sandbox and trust
+              mechanisms, and building tooling around them.
+              My work spans experimental research, open-source contributions, and production security pipelines.
+            </p>
+            <div class="hero-actions">
+              <a class="btn btn-primary" href="assets/cv.pdf" target="_blank" rel="noreferrer">
+                Download CV (PDF)
+              </a>
+              <a class="btn btn-ghost" href="#contact">Contact</a>
+            </div>
+          </div>
+        </section>
+
+        <section class="bento-grid">
+          <article class="bento-card medium" id="projects">
+            <div class="card-media">
+              <img src="posts/iometa-preview.png" alt="iometa kernelcache tooling preview" />
+            </div>
+            <div class="card-kicker">Open-source</div>
+            <h2 class="card-title">iometa</h2>
+            <p class="card-desc">
+              Fixed kernelcache parsing for iOS 15 and earlier.
+              Debugged Mach-O fixup chains to restore compatibility.
+            </p>
+            <div class="card-meta">Upstream patch · iOS kernel tooling</div>
+          </article>
+
+          <article class="bento-card large no-media" id="cve">
+            <div class="card-kicker">Exploit Research</div>
+
+            <h2 class="card-title">CVE-2025-43534</h2>
+
+            <p class="card-desc">
+              Discovered a sandbox escape allowing controlled file writes outside intended containers.
+              The vulnerability arises from trust boundary violations between Apple userland daemons.
+            </p>
+            <p class="card-desc">
+              <strong>Impact:</strong> A user with physical access to an iOS device may be able to bypass Activation
+              Lock.
+              <br>
+              <strong>Description:</strong> A path handling issue was addressed with improved validation.
+            </p>
+
+            <div class="card-meta">
+              Arbitrary file write · sandbox model · iOS userland
+            </div>
+          </article>
+
+          <article class="bento-card small no-media" id="sbpl">
+            <div class="card-kicker">Research Tooling</div>
+            <h2 class="card-title">SBPL Viewer</h2>
+            <ul class="card-list compact">
+              <li>SBPL parsing and normalization</li>
+              <li>Policy graph and inheritance mapping</li>
+              <li>Effective permission inspection</li>
+            </ul>
+          </article>
+
+          <article class="bento-card small no-media" id="kfd">
+            <div class="card-kicker">Kernel Research</div>
+            <h2 class="card-title">KFD / PUAF Study</h2>
+            <ul class="card-list compact">
+              <li>Physical UAF primitives (PUAF)</li>
+              <li>pmap, PPL, and VM internals</li>
+              <li>Kernel R/W primitive construction</li>
+            </ul>
+          </article>
+
+
+          <article class="bento-card medium no-media" id="tooling">
+            <div class="card-kicker">Tooling</div>
+            <h2 class="card-title">KnightWatch</h2>
+            <p class="card-desc">
+              Release integrity gate that validates IPA, XCARCHIVE, APK, and AAB
+              artifacts across CI/CD. Enforces signing checks, metadata consistency,
+              and tamper detection before ship.
+            </p>
+            <div class="card-meta">IPA / XCARCHIVE / APK / AAB</div>
+          </article>
+
+          <article class="bento-card medium" id="experience">
+            <div class="card-media">
+              <img src="posts/bsides-main.jpeg" alt="Bsides Rio CTF recognition" />
+            </div>
+            <div class="card-kicker">Recognition</div>
+            <h2 class="card-title">Bsides Rio CTF — 1st Place</h2>
+            <div class="card-meta">2025 · reverse engineering &amp; exploitation</div>
+          </article>
+        </section>
+
+        <section class="section footer" id="contact">
+          <div class="section-inner">
+            <div class="section-header">
+              <div class="section-title">Contact</div>
+              <div class="section-tag">Let's build something secure</div>
+            </div>
+
+            <div class="footer-grid">
+              <div class="footer-block">
+                <div class="footer-label">Social</div>
+                <div class="footer-links">
+                  <a class="footer-link" href="https://x.com/igorfarias_c" target="_blank" rel="noreferrer">
+                    X
+                  </a>
+                  <a class="footer-link"
+                    href="https://www.instagram.com/igorfarias.c?igsh=MWs3eXlxZnJ4N3V0ag%3D%3D&utm_source=qr"
+                    target="_blank" rel="noreferrer">
+                    Instagram
+                  </a>
+                  <a class="footer-link" href="https://nso.group/@iG0x72" target="_blank" rel="me noreferrer">
+                    Mastodon
+                  </a>
+                  <a class="footer-link" href="https://www.linkedin.com/in/igor-farias-791152233/" target="_blank"
+                    rel="noreferrer">
+                    LinkedIn
+                  </a>
+                </div>
+              </div>
+
+              <div class="footer-block">
+                <div class="footer-label">Contact</div>
+                <div class="contact-row">
+                  <div class="contact-item">
+                    <div class="contact-label">Email</div>
+                    <div class="contact-value">
+                      <a href="mailto:contact@ig0x72.dev">contact@ig0x72.dev</a>
+                    </div>
+                  </div>
+                  <div class="contact-item">
+                    <div class="contact-label">Location</div>
+                    <div class="contact-value">Remote / Brazil</div>
+                  </div>
+                </div>
+                <div class="footnote">Open for research collaborations and security consulting.</div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+  </div>
+
+  <div data-include="dock"></div>
+
+  <script src="js/includes.js"></script>
+  <script src="js/main.js"></script>
+</body>
+
+</html>
