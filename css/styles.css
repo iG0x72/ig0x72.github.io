@@ -244,6 +244,21 @@ body.menubar-scroll-hidden.menubar-reveal .menu-bar {
 
 .menu-icon:hover { opacity: 1; }
 
+/* Control Center toggle - larger click area */
+.control-center-toggle {
+  padding: 4px 8px;
+  margin: -4px -8px;
+  border-radius: var(--radius-sm);
+}
+
+.control-center-toggle:hover {
+  background: rgba(0, 0, 0, 0.08);
+}
+
+body[data-theme="dark"] .control-center-toggle:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
 .menu-icon img {
   width: 16px;
   height: 16px;
@@ -1215,8 +1230,8 @@ body.menubar-scroll-hidden.menubar-reveal .menu-bar {
 }
 
 .status-moon {
-  width: 16px;
-  height: 16px;
+  width: 12px;
+  height: 12px;
   display: block;
   filter: brightness(0) invert(1);
 }
