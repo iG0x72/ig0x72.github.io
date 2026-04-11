@@ -1488,6 +1488,15 @@ body[data-theme="dark"] .hero-stats {
 
   .bento-card.featured {
     min-height: 280px;
+    padding-top: calc(var(--space-lg) + 32px);
+  }
+
+  .bento-card.featured .card-badge {
+    top: var(--space-md);
+    right: var(--space-md);
+    left: var(--space-md);
+    width: auto;
+    text-align: center;
   }
 
   .hero-top {
