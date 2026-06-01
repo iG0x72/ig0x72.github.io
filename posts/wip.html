@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Coming Soon – Igor Farias</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="robots" content="noindex" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/styles.css" />
+</head>
+
+<body data-theme="dark">
+
+  <div data-include="header"></div>
+
+  <div class="desktop">
+    <div class="window">
+      <div class="titlebar">
+        <div class="traffic-lights">
+          <div class="traffic-light red"></div>
+          <div class="traffic-light yellow"></div>
+          <div class="traffic-light green"></div>
+        </div>
+        <div class="titlebar-label">iG0x72 – drafting…</div>
+        <div class="spacer"></div>
+        <div class="titlebar-actions">
+          <button class="titlebar-btn" aria-label="Minimize">
+            <svg width="10" height="2" viewBox="0 0 10 2"><rect width="10" height="2" rx="1" fill="currentColor"/></svg>
+          </button>
+          <button class="titlebar-btn" aria-label="Maximize">
+            <svg width="10" height="10" viewBox="0 0 10 10"><rect width="10" height="10" rx="2" fill="none" stroke="currentColor" stroke-width="1.5"/></svg>
+          </button>
+        </div>
+      </div>
+
+      <main class="content">
+        <div class="wip-wrap">
+
+          <a class="article-back" href="../index.html">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="15 18 9 12 15 6"/>
+            </svg>
+            Back to Portfolio
+          </a>
+
+          <div class="wip-badge">
+            <span class="wip-badge-dot"></span>
+            Work in Progress
+          </div>
+
+          <h1 class="wip-title">Article is being<br>written.</h1>
+          <p class="wip-sub">
+            Still deep in the research. Come back soon — or follow
+            <a href="https://x.com/igorfarias_c" target="_blank" rel="noreferrer" style="color:var(--accent-blue);text-decoration:none;">@igorfarias_c</a>
+            to know when it drops.
+          </p>
+
+          <div class="wip-terminal" aria-hidden="true">
+            <div class="wip-line">
+              <span class="p">$</span>
+              <span class="c">cat status.txt</span>
+            </div>
+            <div class="wip-line">
+              <span class="o">status&nbsp;&nbsp;→ drafting</span>
+            </div>
+            <div class="wip-line">
+              <span class="o">progress →</span>
+            </div>
+            <div class="wip-progress-track">
+              <div class="wip-progress-bar"></div>
+            </div>
+            <div class="wip-line" style="margin-top:4px;">
+              <span class="p">$</span>
+              <span class="wip-cursor"></span>
+            </div>
+          </div>
+
+        </div>
+      </main>
+    </div>
+  </div>
+
+  <div data-include="dock"></div>
+
+  <script src="../js/includes.js"></script>
+  <script src="../js/main.js"></script>
+</body>
+
+</html>

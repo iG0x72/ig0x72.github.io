@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <!-- EDIT: Update title -->
+  <title>Article Title – Igor Farias</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <!-- EDIT: Update description -->
+  <meta name="description" content="Article description." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/styles.css" />
+</head>
+
+<body data-theme="dark">
+
+  <div data-include="header"></div>
+
+  <div class="desktop">
+    <div class="window">
+      <div class="titlebar">
+        <div class="traffic-lights">
+          <div class="traffic-light red"></div>
+          <div class="traffic-light yellow"></div>
+          <div class="traffic-light green"></div>
+        </div>
+        <!-- EDIT: Update window label -->
+        <div class="titlebar-label">iG0x72 – Article</div>
+        <div class="spacer"></div>
+        <div class="titlebar-actions">
+          <button class="titlebar-btn" aria-label="Minimize">
+            <svg width="10" height="2" viewBox="0 0 10 2"><rect width="10" height="2" rx="1" fill="currentColor"/></svg>
+          </button>
+          <button class="titlebar-btn" aria-label="Maximize">
+            <svg width="10" height="10" viewBox="0 0 10 10"><rect width="10" height="10" rx="2" fill="none" stroke="currentColor" stroke-width="1.5"/></svg>
+          </button>
+        </div>
+      </div>
+
+      <main class="content">
+        <article>
+
+          <a class="article-back" href="../index.html">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="15 18 9 12 15 6"/>
+            </svg>
+            Back to Portfolio
+          </a>
+
+          <header class="article-header">
+            <!-- EDIT: Category label -->
+            <div class="article-kicker">iOS Security Research</div>
+            <!-- EDIT: Article title -->
+            <h1 class="article-title">Article Title Goes Here</h1>
+            <div class="article-meta">
+              <!-- EDIT: Publication date (YYYY-MM-DD) -->
+              <span class="article-meta-date">2025-01-01</span>
+              <div class="article-meta-tags">
+                <!-- EDIT: Relevant tags -->
+                <span class="tag">iOS</span>
+                <span class="tag">Kernel</span>
+              </div>
+            </div>
+          </header>
+
+          <div class="article-divider"></div>
+
+          <div class="article-body">
+
+            <!--
+              HOW TO USE THIS TEMPLATE
+              ─────────────────────────
+              1. Copy this file and rename it (e.g. iboot-research.html)
+              2. Update <title>, <meta name="description">, and titlebar-label
+              3. Fill in article-kicker, article-title, date, and tags
+              4. Replace the sections below with your content
+              5. Use <pre><code>…</code></pre> for code blocks
+              6. Use <blockquote> for callouts/notes
+            -->
+
+            <!-- EDIT: Write your article content below -->
+
+            <p>
+              Brief introduction. Set the context for this research — what you found,
+              why it matters, and what the reader will take away.
+            </p>
+
+            <h2>Background</h2>
+            <p>
+              Provide the technical background a reader needs before diving in.
+              Mention relevant subsystems, prior work, or concepts.
+            </p>
+
+            <h2>Discovery</h2>
+            <p>Describe how you found the issue or built the tool.</p>
+
+            <pre><code>// Example code block
+$ command --flag argument
+output here</code></pre>
+
+            <h2>Technical Deep-Dive</h2>
+            <p>
+              Walk through the internals. Include assembly snippets, memory layouts,
+              or pseudocode as needed.
+            </p>
+
+            <blockquote>
+              Key insight or important note about the research.
+            </blockquote>
+
+            <h3>Subsection</h3>
+            <p>Break down complex areas into subsections as needed.</p>
+
+            <h2>Impact</h2>
+            <p>
+              Explain the security impact: what an attacker could do, what it affects,
+              and what the severity is.
+            </p>
+
+            <h2>Conclusion</h2>
+            <p>
+              Wrap up the findings. Link to relevant resources, GitHub repos,
+              or advisories if applicable.
+            </p>
+
+          </div>
+        </article>
+      </main>
+    </div>
+  </div>
+
+  <div data-include="dock"></div>
+
+  <script src="../js/includes.js"></script>
+  <script src="../js/main.js"></script>
+</body>
+
+</html>

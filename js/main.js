@@ -92,7 +92,7 @@ const runSite = () => {
     if (saved === "dark" || saved === "light") {
       applyTheme(saved);
     } else {
-      applyTheme(body.getAttribute("data-theme") || "light");
+      applyTheme(body.getAttribute("data-theme") || "dark");
     }
   })();
 
@@ -174,23 +174,30 @@ const runSite = () => {
   const bootScreen = document.querySelector(".boot-screen");
   const bootBar = document.querySelector(".boot-progress-bar");
   if (bootScreen && bootBar) {
-    const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-    const duration = reduceMotion ? 400 : 1600;
-    const start = performance.now();
+    const alreadyBooted = sessionStorage.getItem("ig-booted");
 
-    function tick(now) {
-      const t = Math.min(1, (now - start) / duration);
-      bootBar.style.width = `${Math.round(t * 100)}%`;
-      if (t < 1) {
-        requestAnimationFrame(tick);
-      } else {
-        setTimeout(() => {
-          bootScreen.classList.add("hidden");
-        }, 200);
+    if (alreadyBooted) {
+      bootScreen.classList.add("hidden");
+    } else {
+      sessionStorage.setItem("ig-booted", "1");
+      const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+      const duration = reduceMotion ? 400 : 1600;
+      const start = performance.now();
+
+      function tick(now) {
+        const t = Math.min(1, (now - start) / duration);
+        bootBar.style.width = `${Math.round(t * 100)}%`;
+        if (t < 1) {
+          requestAnimationFrame(tick);
+        } else {
+          setTimeout(() => {
+            bootScreen.classList.add("hidden");
+          }, 200);
+        }
       }
-    }
 
-    requestAnimationFrame(tick);
+      requestAnimationFrame(tick);
+    }
   }
 
 };
